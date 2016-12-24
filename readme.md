@@ -13,7 +13,7 @@ It is based on the version from [Slluxx](https://github.com/Slluxx/Fivereborn-We
 ## Installation
 
 - Run composer install
-- Open .env_example and edit the DB and FIVEREBORN settings.
+- Open .env_example and edit the DB and FIVEREBORN settings after that save it as **.env**
 ```
 DB_DATABASE=
 DB_USERNAME=
