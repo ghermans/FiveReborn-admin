@@ -14,6 +14,18 @@ It is based on the version from [Slluxx](https://github.com/Slluxx/Fivereborn-We
 
 - Run composer install
 - Open .env_example and edit the DB and FIVEREBORN settings.
+```
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+```
+
+```
+FIVEREBORN_IP=
+FIVEREBORN_PORT=
+FIVEREBORN_PASSWORD=
+```
+
 - Run php artisan migrate:install
 - Run php artisan migrate
 - Run php artisan db:seed
