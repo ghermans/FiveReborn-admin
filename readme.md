@@ -1,6 +1,6 @@
 # FiveReborn admin
 
-This web application allowes you to control the FiveReborn server from your browser.
+This web application allowes you to control your FiveReborn server from the browser.
 It is based on the version from [Slluxx](https://github.com/Slluxx/Fivereborn-Webmanager) however it has some major security and features improvements.
 
 ## Changelog

@@ -1,0 +1,59 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Oxygen);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+body{
+  font-family: 'Oxygen', sans-serif;
+  background-color: $white;
+  font-size: 14px;
+}
+
+.navbar-default{
+  margin-bottom: 1;
+}
+
+.navbar-default .navbar-brand img{
+  line-height: 60px;
+  padding-top: 0;
+  margin-top: -6px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    font-size: 16px;
+    line-height: 50px;
+    padding-top: 20px;
+    margin-bottom: 0;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: $white;
+}
+
+.btn-success {
+  background-color: #4fc55b;
+  border: 1px solid #4fc55b;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .btn-success.focus, .btn-success:active, .btn-success:focus, .btn-success:hover, .open > .dropdown-toggle.btn-success {
+  background-color: #3ebc4b;
+  border: 1px solid #3ebc4b;
+}
+
+.btn-danger {
+  background-color: #d57171;
+  border: 1px solid #d57171;
+}
+
+.btn-danger:active, .btn-danger:focus, .btn-danger:hover, .btn-danger.active, .btn-danger.focus, .btn-danger:active, .btn-danger:focus, .btn-danger:hover, .open > .dropdown-toggle.btn-danger {
+  background-color: #cf5d5d;
+  border: 1px solid #cf5d5d;
+}
