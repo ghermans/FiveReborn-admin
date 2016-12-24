@@ -7,14 +7,13 @@ use Illuminate\Support\Facades\DB;
 class UserSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Create the default user.
      *
      * @return void
      */
     public function run()
     {
-      $data['firstName'] = '';
-      $data['lastName']  = 'Administrator';
+      $data['name']  = 'Administrator';
       $data['username']  = 'admin';
       $data['email']     = 'demo@example.com';
       $data['password']  = bcrypt('admin');

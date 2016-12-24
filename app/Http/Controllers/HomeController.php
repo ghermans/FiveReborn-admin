@@ -40,7 +40,7 @@ class HomeController extends Controller
     	$con->setRconpassword(config('fivereborn.password'));
 			$con->rcon("clientkick $id $kickmessage");
 
-      return redirect('players.index');
+      return redirect()->route('players.index');
     }
 
     /**

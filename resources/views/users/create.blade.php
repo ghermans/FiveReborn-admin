@@ -4,34 +4,41 @@
       <div class="panel panel-default">
         <div class="panel-heading">Create a new user</div>
         <div class="panel-body">
-          <form>
-            <div class="form-group">
-              <label for="firstName">First name</label>
-              <input type="text" name="firstName" class="form-control" id="firstName">
+          <form action="{{url('users/create')}}" method="post" class="form-horizontal">
+            {{ csrf_field() }}
+            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+              <label for="name" class="control-label col-md-2">{{trans('users.name')}} <span class="text-danger">*</span></label>
+               <div class="col-md-6">
+                <input type="text" name="name" id="name" class="form-control">
+               </div>
+            </div>
+
+            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+              <label for="email" class="control-label col-md-2">{{trans('users.email')}} <span class="text-danger">*</span></label>
+              <div class="col-md-6">
+               <input type="email" name="email" id="email" class="form-control">
+             </div>
+            </div>
+
+            <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
+              <label for="username" class="control-label col-md-2">{{trans('users.username')}} <span class="text-danger">*</span></label>
+              <div class="col-md-6">
+               <input type="text" name="username" id="username" class="form-control">
+             </div>
+            </div>
+
+            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+              <label for="password" class="control-label col-md-2">{{trans('users.password')}} <span class="text-danger">*</span></label>
+              <div class="col-md-6">
+               <input type="password" name="password" id="password" class="form-control">
+             </div>
             </div>
 
             <div class="form-group">
-              <label for="lastName">Last name</label>
-              <input type="text" name="lastName" class="form-control" id="lastName">
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email address</label>
-              <input type="email" name="email" class="form-control" id="email">
-            </div>
-
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" name="password" class="form-control" id="password">
-            </div>
-
-            <div class="form-group">
-              <label for="confirmPassword">Confirm password</label>
-              <input type="password" class="form-control" id="confirmPassword">
-            </div>
-
-            <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Create account</button>
-            <button type="submit" class="btn btn-danger"><i class="fa fa-times"></i> Cancel</button>
+              <label class="control-label col-md-2">&nbsp;</label>
+             <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Create account</button>
+             <button type="reset" class="btn btn-danger"><i class="fa fa-times"></i> Cancel</button>
+          </div>
           </form>
         </div>
       </div>

@@ -34,11 +34,11 @@
                                     @foreach($users as $data)
                                         <tr>
                                             <td><code>#U{!! $data->id !!}</code></td>
-                                            <td>{!! $data->firstName !!} {!! $data->lastName !!}</td>
+                                            <td>{!! $data->name !!}</td>
                                             <td><a href="mailto:{!! $data->email !!}">{!! $data->email !!}</a></td>
                                             <td>{!! $data->updated_at !!}</td>
                                             <td>
-                                                <a href="{{url('users/edit', $data->id)}}">{{trans('users.edit')}}</a> | <a href="{{url('staff/destroy', $data->id)}}">{{trans('users.remove')}}
+                                                <a href="{{url('users/edit', $data->id)}}">{{trans('users.edit')}}</a> | <a href="{{url('users/remove', $data->id)}}">{{trans('users.remove')}}
                                                     </a>
                                                 </div>
                                             </td>

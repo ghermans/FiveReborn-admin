@@ -31,10 +31,10 @@ Route::put('/profile', 'UsersController@updateProfile')->name('profile.save');
 
 Route::get('/users', 'UsersController@index')->name('users.index');
 
-Route::get('/users/edit/{$id}', 'UsersController@edit')->name('users.edit');
-Route::get('/users/edit/{$id}', 'UsersController@edit')->name('users.edit');
+Route::get('/users/edit/{id}', 'UsersController@edit')->name('users.edit');
+Route::get('/users/edit/{id}', 'UsersController@edit')->name('users.edit');
 
 Route::get('/users/create', 'UsersController@create')->name('users.create');
 Route::post('/users/create', 'UsersController@saveUser')->name('users.saveUser');
 
-Route::get('/users/remove/{$id}', 'UsersController@remove')->name('users.remove');
+Route::get('/users/remove/{id}', 'UsersController@remove')->name('users.remove');
