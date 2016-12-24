@@ -5,6 +5,8 @@ It is based on the version from [Slluxx](https://github.com/Slluxx/Fivereborn-We
 
 ## Changelog
 
+24/12/2016
+
 - Changed the current players page to a reloadable widget.
 - Added translations.
 - Added user management.
