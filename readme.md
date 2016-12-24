@@ -12,11 +12,12 @@ It is based on the version from [Slluxx](https://github.com/Slluxx/Fivereborn-We
 
 ## Installation
 
-- composer install
-- open .env_example and edit the DB and FIVEREBORN settings.
-- run php artisan migrate:install
-- run php artisan migrate
-- open the application in your browser and login with the username **admin** and password **admin**.
+- Run composer install
+- Open .env_example and edit the DB and FIVEREBORN settings.
+- Run php artisan migrate:install
+- Run php artisan migrate
+- Run php artisan db:seed
+- Open the application in your browser and login with the username **admin** and password **admin**.
 
 ## TODO
 
