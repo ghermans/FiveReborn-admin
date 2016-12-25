@@ -16,23 +16,25 @@ Route::get('/', 'HomeController@index');
 Route::get('/login', 'Auth\LoginController@showLoginForm' );
 Route::post('/login', 'Auth\LoginController@login');
 Route::post('/logout', 'Auth\LoginController@logout');
+// Password Reset Routes...
+Route::get('password/reset/{token?}', 'Auth\ResetPasswordController@showResetForm');
+Route::post('password/email', 'Auth\ResetPasswordController@sendResetLinkEmail');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::get('/home', 'HomeController@index');
 
-
-
-Route::get('/test', 'HomeController@index')->name('players.index');
+Route::get('/players', 'HomeController@index')->name('players.index');
 
 Route::get('/player/kick/{id}', 'HomeController@kick')->name('action.kick');
 Route::get('/player/ban/{id}', 'HomeController@ban')->name('action.ban');
 
 Route::get('/profile', 'UsersController@profile')->name('profile.index');
-Route::put('/profile', 'UsersController@updateProfile')->name('profile.save');
+Route::post('/profile', 'UsersController@updateProfile')->name('profile.save');
 
 Route::get('/users', 'UsersController@index')->name('users.index');
 
 Route::get('/users/edit/{id}', 'UsersController@edit')->name('users.edit');
-Route::get('/users/edit/{id}', 'UsersController@edit')->name('users.edit');
+Route::post('/users/edit/{id}', 'UsersController@update')->name('users.updateUser');
 
 Route::get('/users/create', 'UsersController@create')->name('users.create');
 Route::post('/users/create', 'UsersController@saveUser')->name('users.saveUser');

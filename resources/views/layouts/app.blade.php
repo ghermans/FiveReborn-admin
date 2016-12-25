@@ -13,7 +13,11 @@
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
-
+    <style>
+    .panel-body .form-horizontal .control-label{
+      text-align: left;
+    }
+    </style>
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\NewUserValidator;
+
+use Illuminate\Support\Facades\Auth;
 use App\User;
 
 class UsersController extends Controller
@@ -43,7 +45,7 @@ class UsersController extends Controller
    * @param  Requests\NewUserValidator $request
    * @return \Illuminate\Http\RedirectResponse
    */
-   public function saveUser(Request $request)
+   public function saveUser(NewUserValidator $request)
    {
 
        User::create(
@@ -79,5 +81,23 @@ class UsersController extends Controller
      public function profile()
      {
        return view('users/profile');
+     }
+
+     public function updateProfile(Request $request)
+     {
+
+       if(empty($request->password))
+       {
+         $user = User::find(Auth::id());
+         $user->email = $request->email;
+         $user->save();
+       }else {
+         $user = User::find(Auth::id());
+         $user->email = $request->email;
+         $user->password  = \Hash::make($request->newPassword);
+         $user->save();
+       }
+
+       return redirect()->route('profile.index')->with('success', 'Your profile has been updated!');
      }
    }

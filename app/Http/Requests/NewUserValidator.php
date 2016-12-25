@@ -26,8 +26,8 @@ class NewUserValidator extends FormRequest
         return [
           'name'     => 'required',
           'email'    => 'email',
-          'username' => 'required|unique:posts|max:255',
-          'password' => 'required'
+          'username' => 'required|unique:users|max:255',
+          'password' => 'required|min:6',
         ];
     }
 
@@ -43,8 +43,7 @@ class NewUserValidator extends FormRequest
         'username.required' => 'Please fill in the username for the new user',
         'name.required'     => 'Please fill in the name for the new user',
         'email.required'    => 'Please fill in the email address for the new user',
-        'password.required' => 'Please fill in the password for the new user',
-
+        'password.required' => 'Please fill in a password with min 6 characters for the new user',
       ];
     }
   }

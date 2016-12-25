@@ -1,8 +1,35 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+            @if(session('success'))
+            <div class="alert alert-success">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              {{session('success')}}
+            </div>
+            @endif
+
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
       <div class="panel panel-default">
-        <div class="panel-heading">Create a new user</div>
+        <div class="panel-heading">{{trans('users.createuser')}}</div>
         <div class="panel-body">
           <form action="{{url('users/create')}}" method="post" class="form-horizontal">
             {{ csrf_field() }}
@@ -35,12 +62,15 @@
             </div>
 
             <div class="form-group">
-              <label class="control-label col-md-2">&nbsp;</label>
-             <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Create account</button>
-             <button type="reset" class="btn btn-danger"><i class="fa fa-times"></i> Cancel</button>
+              <div class="col-sm-9 col-sm-offset-2">
+                <button type="submit" class="btn btn-primary">Create account</button>
+                <button type="reset" class="btn btn-danger">Cancel</button>
+              </div>
           </div>
           </form>
         </div>
       </div>
     </div>
+  </div>
+</div>
 @endsection
