@@ -1,21 +1,25 @@
 # FiveReborn admin
 
-This web application allowes you to control your FiveReborn server from the browser.
-It is based on the version from [Slluxx](https://github.com/Slluxx/Fivereborn-Webmanager) however it has some major security and features improvements.
+This application allows you to manage your five reborn server.
+You have the ability to:
 
-## Changelog
+- Add multiple users
+- Kick players from the five reborn server
+- Ban players from the five reborn server
 
-24/12/2016
+## Server Requirements
 
-- Changed the current players page to a reloadable widget.
-- Added translations.
-- Added user management.
-- Added notification if no players are connected to the server.
+- PHP >= 5.6.4
+- OpenSSL PHP Extension
+- PDO PHP Extension
+- Mbstring PHP Extension
+- Tokenizer PHP Extension
+- XML PHP Extension
 
 ## Installation
 
 - Run composer install
-- Open .env_example and edit the DB and FIVEREBORN settings after that save it as **.env**
+- Open .env and edit the DB and FIVEREBORN settings
 ```
 DB_DATABASE=
 DB_USERNAME=
@@ -32,6 +36,15 @@ FIVEREBORN_PASSWORD=
 - Run php artisan migrate
 - Run php artisan db:seed
 - Open the application in your browser and login with the username **admin** and password **admin**.
+
+## Changelog
+
+24/12/2016
+
+- Changed the current players page to a reloadable widget.
+- Added translations.
+- Added user management.
+- Added notification if no players are connected to the server.
 
 ## TODO
 
