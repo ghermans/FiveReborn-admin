@@ -4,8 +4,8 @@ This application allows you to manage your five reborn server.
 You have the ability to:
 
 - Add multiple users
-- Kick players from the five reborn server
-- Ban players from the five reborn server
+- Kick players from the server
+- Ban players from the server
 
 ## Server Requirements
 
