@@ -20,8 +20,7 @@ class CurrentPlayers extends AbstractWidget
     public function placeholder()
     {
         return "<p class=\"text-center\"><i class=\"fa fa-circle-o-notch fa-spin fa-fw\"></i>
-                <span>Loading data from FiveReborn server...</span></p>
-               ";
+                <span>Loading data from FiveReborn server...</span></p>";
     }
 
     /**

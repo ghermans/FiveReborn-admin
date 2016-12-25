@@ -23,7 +23,6 @@
                             <table class="table table-striped table-condensed">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
                                         <th class="col-md-3">{{trans('users.name')}}</th>
                                         <th>{{trans('users.email')}}</th>
                                         <th>{{trans('users.updated_at')}}</th>
@@ -33,7 +32,6 @@
                                 <tbody>
                                     @foreach($users as $data)
                                         <tr>
-                                            <td><code>#U{!! $data->id !!}</code></td>
                                             <td>{!! $data->name !!}</td>
                                             <td><a href="mailto:{!! $data->email !!}">{!! $data->email !!}</a></td>
                                             <td>{!! $data->updated_at !!}</td>

@@ -36,6 +36,7 @@ FIVEREBORN_PASSWORD=
 ## TODO
 
 - Add a installation wizard to make the installation process easier
+- Add integration with [Freeroam 2 by Kanersps](https://forum.fivem.net/t/release-freeroam-2-by-kanersps/2474)
 
 ## License
 

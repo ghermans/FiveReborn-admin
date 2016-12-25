@@ -25,18 +25,15 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/players', 'HomeController@index')->name('players.index');
 
-Route::get('/player/kick/{id}', 'HomeController@kick')->name('action.kick');
-Route::get('/player/ban/{id}', 'HomeController@ban')->name('action.ban');
+Route::get('/player/kick/{id}', 'PlayerController@kick')->name('action.kick');
+Route::get('/player/ban/{id}', 'PlayerController@ban')->name('action.ban');
 
 Route::get('/profile', 'UsersController@profile')->name('profile.index');
 Route::post('/profile', 'UsersController@updateProfile')->name('profile.save');
 
 Route::get('/users', 'UsersController@index')->name('users.index');
-
 Route::get('/users/edit/{id}', 'UsersController@edit')->name('users.edit');
-Route::post('/users/edit/{id}', 'UsersController@update')->name('users.updateUser');
-
+Route::post('/users/update', 'UsersController@updateUser')->name('users.updateUser');
 Route::get('/users/create', 'UsersController@create')->name('users.create');
 Route::post('/users/create', 'UsersController@saveUser')->name('users.saveUser');
-
 Route::get('/users/remove/{id}', 'UsersController@remove')->name('users.remove');

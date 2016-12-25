@@ -29,7 +29,7 @@
       <div class="row">
         <div class="col-md-12">
       <div class="panel panel-default">
-        <div class="panel-heading">{{trans('users.createuser')}}</div>
+        <div class="panel-heading">{{trans('users.createUserTitle')}}</div>
         <div class="panel-body">
           <form action="{{url('users/create')}}" method="post" class="form-horizontal">
             {{ csrf_field() }}

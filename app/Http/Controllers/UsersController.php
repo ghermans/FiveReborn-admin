@@ -30,6 +30,41 @@ class UsersController extends Controller
   }
 
   /**
+   * Show all users.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function edit($id)
+  {
+    $data['user'] = User::find($id);
+    return view('users/edit', $data);
+  }
+
+  public function updateUser(Request $request)
+  {
+    if(empty($request->password))
+    {
+    $user = User::find($request->id);
+    $user->name      = $request->name;
+    $user->email     = $request->email;
+    $user->username  = $request->username;
+    $user->save();
+
+    return redirect()->route('users.index');
+    }
+    else {
+      $user = User::find($request->id);
+      $user->name      = $request->name;
+      $user->email     = $request->email;
+      $user->username  = $request->username;
+      $user->password  = \Hash::make($request->password);
+      $user->save();
+
+      return redirect()->route('users.index');
+    }
+  }
+
+  /**
    * Show the user registration form.
    *
    * @return \Illuminate\Http\Response

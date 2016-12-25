@@ -17,7 +17,6 @@
         <tbody>
            @if (count($server_players_array) > 0)
            @foreach ($server_players_array as $server_player)
-
            <?php
            $playerinfo=explode(" ",$server_player);
            $player_id = array_shift($playerinfo);
